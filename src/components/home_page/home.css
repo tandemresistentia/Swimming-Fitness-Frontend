@@ -1,0 +1,18 @@
+.background-image_header.animate {
+    /* Define the final state */
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media screen and (max-width: 1150px) {
+    .background-image_header {
+  
+      background-image: url('../../assets/images/home_page/Rectangle_2.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 0px;
+      background-size:cover;
+      width: 100%;
+    
+    }
+  }

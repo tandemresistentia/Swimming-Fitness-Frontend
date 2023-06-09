@@ -1,0 +1,147 @@
+
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  /* Additional styling as per your requirements */
+}
+
+
+.app__hero {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end; /* Align items to the right */
+    height: 100vh;
+  }
+
+  .app__hero-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 100px;
+  }
+  
+  .app__hero-text {
+    position: relative;
+    width: 666px;
+    height: 274px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 100px;
+    /* or 125% */
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+  }
+  
+ 
+  
+  .app__hero-button-1 {
+    margin-top: 130px; /* Add margin to create space between the title and button */
+    position: relative;
+    border: 2px solid #F7F8F9;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px 46px;
+    width: 348px;
+    background: #F7F8F9;
+    border-radius: 13px;
+    outline: 4px solid #F7F8F9;
+    outline-offset: 5px;
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 38px;
+    /* identical to box height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+    transition: background-color 0.3s ease;
+
+  }
+
+  .app__hero-button-1.hovered {
+    background-color: black;
+    outline: 4px solid black;
+    border: 2px solid black;
+    color: white;
+    animation: button-animation1 0.5s ease;
+  }
+  
+  
+  @keyframes button-animation1 {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+
+  @media screen and (max-width: 1150px) {
+    .app__hero-title {
+      display: flex;
+      flex-direction: column;
+
+
+    }
+    
+    .app__hero-text {
+      position: relative;
+      width: 300px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1em;
+      /* or 125% */
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #000000;
+      text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+      padding: 10px;
+      margin-left: 38%;
+    }
+    
+    .app__hero-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      margin-top:-50px; /* Add margin to create space between the title and button */
+      position: relative;
+      border: 2px solid #F7F8F9;
+      border-radius: 20px;
+      box-sizing: border-box;
+      padding: 20px 20px;
+      width: 300px;
+      background: #F7F8F9;
+      border-radius: 13px;
+      outline: 4px solid #F7F8F9;
+      outline-offset: 5px;
+      margin-left: 25%;
+      margin-bottom: 300px;
+    }
+    .app__hero-button-1{
+      margin-top: -15%;
+      margin-left: 25%;
+      font-size: 20px;
+    }
+  }

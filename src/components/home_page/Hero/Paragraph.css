@@ -1,0 +1,23 @@
+@keyframes paragraph-animation {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .custom-paragraph.animate {
+    animation-name: paragraph-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+  }
+
+
+  .last-word {
+    color: #00E9F8;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add an outer shadow */
+  }

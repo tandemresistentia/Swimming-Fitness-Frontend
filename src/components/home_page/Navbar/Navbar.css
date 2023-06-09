@@ -1,0 +1,165 @@
+.app__navbar {
+/* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Background */
+    background: #FFFFFF;
+    box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 5px 40px;
+    width: 80%;
+    margin: 0 auto;
+    min-width: 1200px;
+    
+}
+
+.app__navbar-logo {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+.app__navbar-links {
+    /* text-md/Medium */
+    display: flex;
+    flex: 1;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+.p_navbar a{
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    white-space: nowrap;
+    color: #556987;
+}
+.p_navbar a:hover{
+    color: #000000;
+}
+
+.p_navbar {
+    margin: 0 30px;
+}
+
+.app__navbar-login {
+    /* text-md/Medium */
+    display: flex;
+    flex: 1;
+    list-style: none;
+    justify-content: right;
+    align-items: center;
+}
+
+.app__navbar-login a{
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 20px;
+}
+
+.navbar-login{
+    color: #556987;
+}
+
+.navbar-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background: #00B9C5;
+    box-shadow: 4px 4px 6px rgba(105, 81, 255, 0.05);
+    border-radius: 6px;
+    transition: background-color 1s ease, transform 0.3s;
+}
+  
+  .navbar-signup.hovered {
+    color: #00B9C5;
+    transform: scale(1.2);
+    background-color: black;
+
+  }
+  
+  
+
+
+.app__navbar-smallscreen {
+    display: none;
+}
+
+.app__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s ease;
+    opacity: 1;
+    flex-direction: column;
+    z-index: 5;
+}
+
+
+.app__navbar-smallscreen_overlay .overlay__close{
+    position: absolute;
+    top: 26px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.app__navbar-smallscreen-links{
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.p_navbar.signup a{
+    color: #F0FDF4;
+    background: #00B9C5;
+    box-shadow: 5px 5px 5px 5px rgba(105, 81, 255, 0.05);
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+@media screen and (max-width: 1150px) {
+    .app__navbar {
+        width: 77%;
+        min-width:auto;
+    }
+    .app__navbar-links{
+        display: none;
+    }
+
+    .app__navbar-smallscreen {
+        display: flex;
+    }
+    
+}

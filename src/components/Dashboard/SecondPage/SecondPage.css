@@ -1,0 +1,459 @@
+.app-dashboard {
+  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #EDEDED;
+    animation: slide-in 0.25s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+  
+.slide-button1 {
+}
+
+.nav-dashboard {
+  width: 1100px;
+}
+
+.middle-dashboard {
+  width: 100%;
+  transform: translateY(50px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.log-dashboard {
+  transform: translateY(-155px);
+  /* Black & White/White */
+  width: 218px;
+  height: 222px;
+  background: #FFFFFF;
+  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+  border-radius: 37px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.log-training{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 193px;
+  height: 76px;
+  background: #FFFFFF;
+  /* shadow1 */
+
+  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+  border-radius: 49px;
+}
+.log-training-text{
+  /* P small text bold */
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 180%;
+  /* identical to box height, or 27px */
+
+  text-transform: capitalize;
+
+  color: #000000;
+}
+
+.recent-activity-text {
+    /* P small text bold */
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 180%;
+  /* identical to box height, or 27px */
+
+  text-transform: capitalize;
+
+  color: #000000;
+}
+.recent-activity{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.training-chart{
+  transform: translateY(-75px);
+  /* Black & White/White */
+  width: 538px;
+  height: 543px;
+  background: #FFFFFF;
+  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+  border-radius: 57px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.training-chart-line{
+  background: rgba(102, 102, 102, 0.25);
+  border-radius: 66px;
+  transform: rotate(0.02deg);
+  width: 474px;
+  height: 1.96px;
+}
+.training-back{
+}
+.training-chart-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+.training-chart-text1{
+  margin-top: -60px;
+  /* P text bold */
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 180%;
+  /* identical to box height, or 36px */
+
+
+  color: #000000;
+}
+
+.training-chart-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-ar;
+  align-items: center;
+}
+
+.training-chart-button{
+  /* P text */
+  margin-right: 10px;
+  width: 110px;
+  height: 58px;
+  background: #FFFFFF;
+/* shadow1 */
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 49px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 180%;
+  /* identical to box height, or 36px */
+
+
+  color: #000000;
+}
+
+.training-chart-graph {
+  width: 481px;
+  height: 282px;
+}
+
+
+
+.middle-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.training-plans {
+  width: 506px;
+  height: 457px;
+  background: #FFFFFF;
+  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+  border-radius: 57px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.training-plans-text {
+  /* P text bold */
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 180%;
+  /* identical to box height, or 36px */
+
+
+  color: #000000;  
+}
+
+.training-plans-buttons{
+  transform: translateY(-25px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.training-plans-button{
+  margin-left: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 49px;
+  width: 204.79px;
+  height: 76px;
+
+  /* P text */
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 180%;
+  /* identical to box height, or 36px */
+
+
+  color: #000000;
+}
+
+
+.training-plans-scrolling-list {
+  width: 506px;
+  height: 256px;
+  background: #F3F3F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 49px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.training-plans-scrolling-list-item{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;  
+  width: 410px;
+  height: 84px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.training-plans-scrolling-list-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+}
+.training-plans-scrolling-list-line{
+  width: 412.81px;
+  height: 1.96px;
+  background: rgba(102, 102, 102, 0.25);
+  border-radius: 66px;
+  transform: rotate(0.02deg);  
+  margin: 15px;
+}
+.training-plans-scrolling-list-scroll {
+  width: 11.06px;
+  height: 197.79px;
+  background: #FFFFFF;
+border-radius: 66px;
+transform: rotate(0.02deg);
+}
+
+
+.most-popular {
+  transform: translateY(25px);
+  width: 367px;
+  height: 319px;
+  /* Black & White/White */
+
+  background: #FFFFFF;
+  /* shadow1 */
+
+  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+  border-radius: 57px;
+}
+.most-popular-text{
+  /* P text */
+  margin-left: 50px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 180%;
+  /* or 36px */
+
+
+  color: #000000;  
+}
+.most-popular-item {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.most-popular-item-text{
+  transform: translateX(-65px);
+}
+.most-popular-item-name{
+  /* P text */
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 180%;
+  /* identical to box height, or 36px */
+
+
+  color: #000000;  
+}
+
+.most-popular-item-subname{
+  transform: translateY(-20px);
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 180%;
+  /* or 25px */
+  
+  
+  color: #5A5A5A;  
+}
+
+.slide-button-dashboard{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bottom-dashboard {
+  transform: translateY(-25px);
+  margin-top: -19px;
+}.slide-button-dashboard{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bottom-dashboard {
+  transform: translateY(-25px);
+  margin-top: -19px;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav-dashboard{
+    width: 80%;
+  }
+  .app-dashboard {
+  overflow-x:  hidden !important;
+  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #EDEDED;
+}
+  .middle-dashboard {
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.training-chart{
+  width: 95%;
+}
+.training-chart-button{
+  width: 50%;
+}
+.training-chart-buttons{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.training-chart-text{
+  width: 50%;
+}
+.training-back{
+  width: 180%;
+}
+
+.training-plans{
+  margin-right: 102px;
+  width: 65%;
+}
+
+.training-plans-button{
+  width: 50%;
+}
+.training-plans-scrolling-list{
+  width: 100%;
+}
+
+.training-plans-scrolling-list-item{
+  width: 68%;
+  margin-right: 15px;
+}
+.training-plans-scrolling-list-line{
+
+}
+.most-popular{
+  margin-right: 105px;
+}
+.slide-button-dashboard{
+  margin: 100px;
+}
+
+.training-chart-line{
+  width: 90%;
+}
+}

@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.home-page {
+  overflow: hidden;
+}
+.background-image_header {
+  background-image: url('assets/images/home_page/Rectangle_2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 500px;
+
+  /* Define the initial state */
+  opacity: 0;
+  transform: translateY(-50px);
+
+  /* Apply the transition */
+  transition: opacity 2s ease, transform 4s ease;
+}
+
+.background-image_header.animate {
+  /* Define the final state */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 1150px) {
+  .background-image_header {
+
+    background-image: url('assets/images/home_page/Rectangle_2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 0px;
+    background-size:cover;
+    width: 100%;
+  
+  }
+}

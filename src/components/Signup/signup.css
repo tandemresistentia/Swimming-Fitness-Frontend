@@ -1,0 +1,238 @@
+.app-login {
+    background-image: url('../../assets/images/login/login-bg.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.app-container {
+    width: 795px;
+    height: 861px;
+    background: #FFFFFF;
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.app-login_subtitle {
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+
+    color: #333333;
+
+}
+
+.app-login_subtitle-link {
+    color: #333333;
+}
+
+.app-login_social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+
+    box-sizing: border-box;
+
+    width: 528px;
+    height: 72px;
+
+    background: #FFFFFF;
+    border: 1px solid #333333;
+    border-radius: 40px;
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #333333;
+}
+
+.app-login_social-logo{
+    margin-right: 10px;
+}
+
+.login-decal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.login-decal_line {
+    width: 223.5px;
+    height: 2px;
+    background: rgba(102, 102, 102, 0.25);
+}
+
+.decal-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #666666;
+    margin: 20px;
+}
+
+
+
+.app-signup_form{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin-top: -25px;
+}
+
+.app-login-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:first baseline;
+}
+
+.form-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height */
+
+
+    color: #666666;
+}
+
+.input-bar {
+    margin-top: -5px;
+    /* Text field */
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    width: 528px;
+    height: 56px;
+
+    border: 1px solid rgba(102, 102, 102, 0.35);
+    border-radius: 12px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height */
+
+
+    color: #666666;
+}
+
+.app-signup-forgot {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:last baseline baseline;
+}
+
+.app-login_forgot-text {
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: right;
+    text-decoration-line: underline;
+
+    color: #111111;
+}
+
+.app-login_button {
+    margin-top: 10px;
+    width: 528px;
+    height: 64px;
+
+    background: #111111;
+    opacity: 0.25;
+    border-radius: 40px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+
+
+
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1150px) {
+
+    .app-login_form {
+        margin-top: -25px;
+    }
+    .app-container {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .app-login_social {
+        width: 255px !important;
+        font-size: 17px !important;
+        
+    }
+
+    .login-decal_line {
+        width: 100px !important;
+    }
+    .app-login_button {
+        width: 228px !important;
+        height: 48px !important;
+        font-size: 22px !important;
+        margin-bottom: 10px;
+    }
+
+    .input-bar {
+        width: 255px !important;
+        height: 48px !important;
+    }
+
+    .app-login_forgot-text {
+        font-size: 12px !important;
+    }
+}
