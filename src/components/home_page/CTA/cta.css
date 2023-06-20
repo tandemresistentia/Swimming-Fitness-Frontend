@@ -97,7 +97,12 @@ color: #556987;
     border-radius: 6px;
     transition: background-color 1s ease, transform 0.3s;
 }
-  
+
+.cta-button-1-1{
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #F0FDF4;
+}
   .cta-button-1:hover {
     background-color: black;
     color: white;
@@ -114,6 +119,7 @@ color: #556987;
     line-height: 28px;
     /* identical to box height, or 156% */
     margin-left: 20px;
+    text-decoration-line: none;
 
     /* Gray/800 */
 
@@ -132,6 +138,11 @@ color: #556987;
     border-radius: 6px;
 }
 
+.cta-button-2-2{
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #333F51;
+}
 @media screen and (max-width: 1150px) { 
 
     .app_cta {

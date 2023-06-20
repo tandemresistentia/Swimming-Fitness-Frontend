@@ -1,0 +1,211 @@
+.log-dashboard {
+    transform: translateY(-155px);
+    /* Black & White/White */
+    width: auto;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+    border-radius: 37px;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 3;
+    margin-top: 60px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px;
+  }
+  .log-training{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    width: 193px;
+    height: 76px;
+    background: #FFFFFF;
+    /* shadow1 */
+  
+    box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+    border-radius: 49px;
+
+    
+  }
+  
+  .animation-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .animation-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .log-training-text{
+    /* P small text bold */
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 180%;
+    /* identical to box height, or 27px */
+  
+    text-transform: capitalize;
+  
+    color: #000000;
+    margin-right: 8px;
+  }
+  .log-training-rectangle{
+    position: absolute;
+    top: 0;
+    left: 220px;
+    width: auto;
+    height: auto;
+    box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
+    border-radius: 49px;
+    background-color: #EDEDED;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+  
+  .log-training-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  
+  }
+  .fade{
+  position: absolute;
+  top: 0;
+  left: 200px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  
+  }
+  
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  
+  .dashboard-rectangle-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+  
+  .dashboard-rectangle-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    /* identical to box height, or 36px */
+  
+  
+    color: #000000;
+  }
+  
+  
+  .recent-activity-text {
+      /* P small text bold */
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 180%;
+    /* identical to box height, or 27px */
+  
+    text-transform: capitalize;
+  
+    color: #000000;
+  }
+  .recent-activity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .recent-activity-groups{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 300px;
+    overflow-y: auto;
+  }
+
+  .recent-activity-groups::-ms-scrollbar-thumb:hover{
+    width: 8px;
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners of the thumb */
+  }
+  .log-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 5px;
+    width: 135px;
+  }
+  
+  .logo-item-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 180%;
+    /* identical to box height, or 27px */
+  
+    text-transform: capitalize;
+  
+    color: #000000;
+    margin: 10px;
+  }
+  
+@media screen and (max-width:1150px) {
+  .log-training-rectangle{
+    position: absolute;
+    top: 70px;
+    left: -50px;
+    width: auto;
+    height: auto;
+    z-index: 3;
+  }
+}

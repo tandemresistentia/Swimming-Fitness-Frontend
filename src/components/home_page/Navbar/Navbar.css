@@ -157,7 +157,13 @@
     .app__navbar-links{
         display: none;
     }
+    .app__navbar-login{
+        display: none;
+    }
 
+    .navbar-signup{
+        transform: translateX(60px);
+    }
     .app__navbar-smallscreen {
         display: flex;
     }

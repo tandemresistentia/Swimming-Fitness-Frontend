@@ -201,6 +201,17 @@
     color: #FFFFFF;
 }
 
+.error-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+
+
+
+    color: red;
+}
 
 @media screen and (max-width: 1150px) {
     .app-container {

@@ -35,74 +35,6 @@
 
 }
 
-.log-challenges {
-  transform: translateY(-230px);
-  /* Black & White/White */
-  width: 218px;
-  height: 222px;
-  background: #FFFFFF;
-  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
-  border-radius: 37px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.log-challenge{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 193px;
-  height: 76px;
-  background: #FFFFFF;
-  /* shadow1 */
-
-  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
-  border-radius: 49px;
-}
-.log-challenges-text{
-  margin-left: 20px;
-  /* P small text bold */
-  width: 700px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 180%;
-  /* identical to box height, or 27px */
-
-  text-transform: capitalize;
-
-  color: #000000;
-}
-
-.add-button {
-  margin-right: 20px;
-}
-
-.challenge-progress-text {
-    /* P small text bold */
-
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 180%;
-  /* identical to box height, or 27px */
-
-  text-transform: capitalize;
-
-  color: #000000;
-}
-.challenge-progress{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 
 
@@ -112,100 +44,7 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
-.challenges-plans {
-  transform: translateY(-70px);
-  width: 845px;
-  height: 651px;
-  background: #FFFFFF;
-  box-shadow: 10px 40px 98px rgba(0, 0, 0, 0.3);
-  border-radius: 57px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.challenges-plans-text {
-  /* P text bold */
-
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 180%;
-  /* identical to box height, or 36px */
-
-
-  color: #000000;  
-}
-
-.challenges-plans-scrolling-list {
-  width: 756px;
-  height: 530px;
-  background: #F3F3F3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 49px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.challenges-plans-scrolling-list-item{
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;  
-  width: 630px;
-  height: 140px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.challenges-plans-scrolling-list-center{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20px;
-}
-.challenges-plans-scrolling-list-line{
-  width: 612.81px;
-  height: 1.96px;
-  background: rgba(102, 102, 102, 0.25);
-  border-radius: 66px;
-  transform: rotate(0.02deg);  
-  margin: 15px;
-}
-.challenges-plans-scrolling-list-scroll {
-  width: 11.06px;
-  height: 420.79px;
-  background: #FFFFFF;
-border-radius: 66px;
-transform: rotate(0.02deg);
-}
-
-.challenges-plans-scrolling-list-item-button{
-  width: 78px;
-  height: 29px;
-  
-  background: #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 49px; 
-
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 180%;
-  /* or 25px */
-  
-  
-  color: #FFFFFF; 
-}
 .down-arrow{
   margin-right: 20px;
 }
@@ -223,23 +62,25 @@ transform: rotate(0.02deg);
 @media screen and (max-width:1150px) {
 
   .nav-challenges{
-    margin-bottom: -40px;
-    transform: translateY(750px);
+    margin-bottom: 0px;
+    transform: translateY(840px);
     width: 80%;
+    z-index: 1;
   }
   .challenges-plans{
     overflow-x: hidden;
     transform: translateY(0px);
   }
   .log-challenges{
-    transform: translateY(800px);
+    transform: translateY(0px);
 
-    margin-bottom: 800px;
+    margin-bottom: 0px;
 
   }
   .middle-challenges{
-    margin-top: 0px;
-    margin-bottom: 200px;
+    margin-top: 1000px;
+    margin-bottom: 0px;
+    transform: translateY(0px);
     flex-direction: column;
     }
 
@@ -251,7 +92,7 @@ transform: rotate(0.02deg);
       width: 220%;
       margin-top: 100px;
       margin-bottom: 70px;
-      transform: translateX(100px);
+      transform: translateX(0px);
 
     }
 
@@ -261,6 +102,9 @@ transform: rotate(0.02deg);
     .challenges-plans-scrolling-list-item{
       transform: translateX(30px);
       width: 230%;
+    }
+    .bottom-challenges{
+      transform: translateY(400px);
     }
     .bottom-chall{
       margin-top: -80px;

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './hero.css'
 import switcher from '../../../assets/images/home_page/Ellipse_1.png'
 import Paragraph from './Paragraph';
-
+import { Link } from 'react-router-dom'
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -21,10 +21,12 @@ const Hero = () => {
         <div className='app__hero-text'>
           <Paragraph content="Swimming is not a hobby, it's a passion" />
         </div>
-        <button className={`app__hero-button-1 ${isHovered ? 'hovered' : ''}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >JOIN NOW FOR FREE</button>
+        <Link to='/login' className={`app__hero-button-1 ${isHovered ? 'hovered' : ''}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        JOIN NOW FOR FREE
+      </Link>
       </div>
     </div>
 

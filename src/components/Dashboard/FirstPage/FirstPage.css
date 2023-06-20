@@ -122,9 +122,9 @@
 }
 
 .profile-data {
-  margin-right: 10px;
-  margin-left: 10px;
-
+  margin-right: 13px;
+  margin-left: 13px;
+  max-width: 240px;
   /* P text */
 
   font-family: 'Poppins';
@@ -138,7 +138,22 @@
 
   color: #000000;
 }
+.profile-name-user{
+  margin-left: 10px;
+  max-width: 200px;
+  /* P text */
 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 180%;
+  /* or 36px */
+
+  text-align: center;
+
+  color: #000000;
+}
 .downside-profile {
   display: flex;
   flex-direction: row;

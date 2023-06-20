@@ -55,7 +55,7 @@ button {
     border-radius: 13px;
     outline: 4px solid #F7F8F9;
     outline-offset: 5px;
-
+    text-decoration-line: none;
 
     font-family: 'Poppins';
     font-style: normal;

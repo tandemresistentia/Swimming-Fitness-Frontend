@@ -1,13 +1,14 @@
 import React from 'react'
 import './Resources.css'
-import NavBar from '../home_page/Navbar/Navbar'
+import Navbar from '../home_page/Navbar/Navbar'
 import Footer from '../home_page/Footer/footer'
 const Resources = () => {
+  
   return (
     <div className='app-resources'>
       
       <div className='resources-main'>
-        <div className='resources-nav'><NavBar /></div>
+        <div className='resources-nav'><Navbar /></div>
         <div className='resources-title'>
         <p className='title-big'>Resources</p> 
         <p className='title-small'>
