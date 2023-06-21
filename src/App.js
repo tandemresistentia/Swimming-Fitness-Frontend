@@ -8,7 +8,6 @@ import FirstPage from './components/Dashboard/FirstPage/FirstPage';
 import SecondPage from './components/Dashboard/SecondPage/SecondPage';
 import ThirdPage from './components/Dashboard/ThirdPage/ThirdPage';
 import Resources from './components/Resources/Resources';
-import ProtectedRoute from './ProtectedRoute';
 
 function App() {
   const token = localStorage.getItem('token');

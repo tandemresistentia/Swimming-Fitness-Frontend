@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -16,6 +15,7 @@ import Chart from '../../../assets/images/dashboard/Chart.png';
 import Swimmer from '../../../assets/images/dashboard/Swimmer.png';
 import Vector from '../../../assets/images/dashboard/Vector.png';
 import BASE_URL from './../../config';
+
 const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
   const [editMode, setEditMode] = useState(false);
   const [editedProfileData, setEditedProfileData] = useState({});
@@ -87,11 +87,6 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
     }
   }, [profileData]);
 
-  const handleMultipleChange = (event) => {
-
-    handleInputChange(event);
-  };
-
   return (
     <div className={`app-profile ${animate ? 'animate' : ''}`}>
       <div className='container-profile'>
@@ -101,28 +96,26 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
 
         <div className='middle-profile'>
           <div className='middle-upper-profile'>
-          <div className='profile-photo'>
-      <img className='duck-front' src={DuckyDuck} alt='profile-photo' />
-       
-        <img className='duck-back' src={DuckBack} />
-        {editMode ? (
-            <input
-              className='profile-name-user'
-              type='text'
-              name='username'
-              value={editedProfileData.username || ''}
-              onChange={handleInputChange}
-            />
-          ) : (
-            <p className='profile-name'>{profileData ? profileData.username : 'Loading...'}</p>
-          )}
-        
-      </div>
+            <div className='profile-photo'>
+              <img className='duck-front' src={DuckyDuck} alt='Profile' />
+              <img className='duck-back' src={DuckBack} alt='' />
+              {editMode ? (
+                <input
+                  className='profile-name-user'
+                  type='text'
+                  name='username'
+                  value={editedProfileData.username || ''}
+                  onChange={handleInputChange}
+                />
+              ) : (
+                <p className='profile-name'>{profileData ? profileData.username : 'Loading...'}</p>
+              )}
+            </div>
 
             <div className='profile-info-main'>
               <div className='profile-info-left'>
                 <div className='profile-info'>
-                  <img src={Clock} alt='clock-icon' />
+                  <img src={Clock} alt='Clock' />
                   <p className='profile-data'>Age</p>
                   {editMode ? (
                     <input
@@ -140,7 +133,7 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
                 </div>
 
                 <div className='profile-info'>
-                  <img src={Smiling} alt='smiling-icon' />
+                  <img src={Smiling} alt='Smiling' />
                   <p className='profile-data'>Gender</p>
                   {editMode ? (
                     <select
@@ -156,14 +149,13 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
                     </select>
                   ) : (
                     <p className='profile-data'>
-                    {profileData ? profileData.gender : 'Loading...'}
-                  </p>
+                      {profileData ? profileData.gender : 'Loading...'}
+                    </p>
                   )}
-
                 </div>
 
                 <div className='profile-info'>
-                  <img src={Internet} alt='internet-icon' />
+                  <img src={Internet} alt='Internet' />
                   <p className='profile-data'>Location</p>
                   {editMode ? (
                     <input
@@ -183,21 +175,21 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
 
               <div className='profile-info-right'>
                 <div className='profile-info'>
-                  <img src={Chart} alt='chart-icon' />
+                  <img src={Chart} alt='Chart' />
                   <p className='profile-data'>Total Distance Swum</p>
                   <p className='profile-data'>
                     {profileData ? profileData.total_distance_swum.toFixed(2) : 'Loading...'}
                   </p>
                 </div>
                 <div className='profile-info'>
-                  <img src={Swimmer} alt='swimmer-icon' />
+                  <img src={Swimmer} alt='Swimmer' />
                   <p className='profile-data'>Total Trained Time</p>
                   <p className='profile-data'>
                     {profileData ? profileData.average_lap_time.toFixed(2) : 'Loading...'}
                   </p>
                 </div>
                 <div className='profile-info'>
-                  <img src={Vector} alt='vector-icon' />
+                  <img src={Vector} alt='Vector' />
                   <p className='profile-data'>Completed Challenges</p>
                   <p className='profile-data'>
                     {profileData ? profileData.completed_challenges : 'Loading...'}
@@ -211,26 +203,24 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
             <button className='profile-button' onClick={handleEditProfile}>
               {editMode ? 'Save Profile' : 'Edit Profile'}
             </button>
-            <Link to="/dashboard"><button className='profile-button2'>
-              Log a new swimming session          
-            </button></Link>
-            <Link to="/challenges"><button className='profile-button'>
-              Start a new challenge          
-            </button></Link>
+            <Link to="/dashboard">
+              <button className='profile-button2'>
+                Log a new swimming session
+              </button>
+            </Link>
+            <Link to='/dashboard/history'>
+              <button className='profile-button3'>View Session History</button>
+            </Link>
+            <Link to='/dashboard/challenges'>
+              <button className='profile-button4'>View Challenges</button>
+            </Link>
           </div>
         </div>
 
-        <div className='downside-profile'>
-          <img className='bottom-profile' src={BottomProfile} alt='bottom-profile' />
+        <div className='bottom-profile'>
+          <img className='bottom-profile-img' src={BottomProfile} alt='bottom-profile' />
+          <img className='chevron-right' src={ChevronRight} alt='chevron' />
         </div>
-      </div>
-
-      <div className='slide-button1'>
-        <button className='button-right-profile'>
-          <Link to='/dashboard'>
-            <img src={ChevronRight} alt='chevron-right' />
-          </Link>
-        </button>
       </div>
     </div>
   );

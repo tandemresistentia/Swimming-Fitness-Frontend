@@ -43,6 +43,7 @@ const Resources = () => {
             <p className="resources-body-title">Global Triathlon Network</p>
             <div className="resources-body-element-line"></div>
             <iframe
+              title='1'
               className="resources-body-video"
               src="https://www.youtube.com/embed/o00QFnISZS0"
               allow="fullscreen"

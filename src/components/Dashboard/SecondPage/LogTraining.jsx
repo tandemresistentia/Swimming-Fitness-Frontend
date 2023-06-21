@@ -8,6 +8,7 @@ import './SecondPage.css';
 import './LogTraining.css';
 import { Scrollbars } from 'react-custom-scrollbars';
 import BASE_URL from './../../config';
+
 const LogTraining = () => {
   const [showRectangle, setShowRectangle] = useState(false);
   const [profileData, setProfileData] = useState(null);
@@ -47,7 +48,6 @@ const LogTraining = () => {
     };
 
     const apiUrl = `${BASE_URL}/api/logtraining/`;
-    const token = localStorage.getItem('token');
 
     axios
       .post(apiUrl, logTrainingData, {
@@ -63,8 +63,10 @@ const LogTraining = () => {
           location: profileData.location,
           username: profileData.username,
           completed_challenges: profileData.completed_challenges,
-          total_distance_swum: profileData.total_distance_swum + parseInt(logTrainingData.distance) / 1000,
-          average_lap_time: profileData.average_lap_time + parseInt(logTrainingData.time) / 60,
+          total_distance_swum:
+            profileData.total_distance_swum + parseInt(logTrainingData.distance) / 1000,
+          average_lap_time:
+            profileData.average_lap_time + parseInt(logTrainingData.time) / 60,
         };
 
         await axios.put(`${BASE_URL}/api/profile/`, profileDataToUpdate, {
@@ -89,7 +91,6 @@ const LogTraining = () => {
   useEffect(() => {
     const fetchLogData = async () => {
       try {
-        const token = localStorage.getItem('token');
         const response = await axios.get(`${BASE_URL}/api/logtraining/`, {
           headers: {
             Authorization: `token ${token}`,
@@ -110,16 +111,6 @@ const LogTraining = () => {
 
     fetchLogData();
   }, []);
-
-  const saveLogTraining = () => {
-    const token = localStorage.getItem('token');
-    const requestBody = {
-      distance: setLogData.distance,
-      time: setLogData.time,
-      fastest_lap: setLogData.fastest_lap,
-      // Add other log training fields as needed
-    };
-  };
 
   return (
     <>

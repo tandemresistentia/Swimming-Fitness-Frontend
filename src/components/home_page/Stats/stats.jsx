@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './stats.css';
 
 const Stats = () => {
   const [loaded, setLoaded] = useState(false);
-  const targetPercentages = [160, 140, 250];
+  const targetPercentages = useMemo(() => [160, 140, 250], []); // Initialize targetPercentages using useMemo
   const [percentages, setPercentages] = useState([0, 0, 0]);
 
   useEffect(() => {
@@ -36,12 +36,12 @@ const Stats = () => {
 
       return () => clearInterval(interval);
     }
-  }, [loaded, targetPercentages]); // Added targetPercentages to the dependency array
+  }, [loaded, targetPercentages]);
 
   useEffect(() => {
     AOS.init({
-      duration: 800, // Animation duration in milliseconds
-      offset: 200, // Offset (in pixels) from the element's bottom before the animation triggers
+      duration: 800,
+      offset: 200,
     });
   }, []);
 
