@@ -15,7 +15,7 @@ import Internet from '../../../assets/images/dashboard/Internet.png';
 import Chart from '../../../assets/images/dashboard/Chart.png';
 import Swimmer from '../../../assets/images/dashboard/Swimmer.png';
 import Vector from '../../../assets/images/dashboard/Vector.png';
-
+import BASE_URL from './../../config';
 const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
   const [editMode, setEditMode] = useState(false);
   const [editedProfileData, setEditedProfileData] = useState({});
@@ -42,7 +42,7 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
       // Add other profile fields as needed
     };
     axios
-      .put('http://127.0.0.1:8000/api/profile/', requestBody, {
+      .put(`${BASE_URL}/api/profile/`, requestBody, {
         headers: {
           Authorization: `token ${token}`,
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const FirstPage = ({ handleButtonClick, goToNextPage, animate }) => {
     const token = localStorage.getItem('token');
     if (!profileData) {
       axios
-        .get('http://127.0.0.1:8000/api/profile/', {
+        .get(`${BASE_URL}/api/profile/`, {
           headers: {
             Authorization: `token ${token}`,
             'Content-Type': 'application/json',

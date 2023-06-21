@@ -6,7 +6,7 @@ import facebook from '../../assets/images/login/facebook-logo.png';
 import google from '../../assets/images/login/google-logo.png';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import BASE_URL from './../config';
 const Login = () => {
   const [showScreen, setShowScreen] = useState(false);
   const [username, setUsername] = useState('');
@@ -38,7 +38,7 @@ const Login = () => {
     setIsLoggingIn(true); // Disable the login button
 
     axios
-    .post('http://localhost:8000/api/dj-rest-auth/login/', formData)
+    .post(`${BASE_URL}/api/dj-rest-auth/login/`, formData)
     .then(response => {
       console.log(response);
       const responseData = JSON.parse(response.config.data);

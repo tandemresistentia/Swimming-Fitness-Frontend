@@ -4,7 +4,7 @@ import AddButton from '../../../assets/images/dashboard/AddButton.png';
 import Divider from '../../../assets/images/dashboard/Divider.png';
 import './UpdateChallenge.css';
 import { Scrollbars } from 'react-custom-scrollbars';
-
+import BASE_URL from './../../config';
 const UpdateChallenge = () => {
   const [challenges, setChallenges] = useState([]);
   const [isUpdating, setIsUpdating] = useState(true);
@@ -19,7 +19,7 @@ const UpdateChallenge = () => {
 
   const fetchChallenges = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/challenges/', {
+      const response = await axios.get(`${BASE_URL}/api/challenges/`, {
         headers: { Authorization: `Token ${token}` },
       });
 
@@ -32,7 +32,7 @@ const UpdateChallenge = () => {
 
   const fetchProfileData = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/profile/', {
+      const response = await axios.get(`${BASE_URL}/api/profile/`, {
         headers: { Authorization: `Token ${token}` },
       });
 
@@ -63,7 +63,7 @@ const UpdateChallenge = () => {
         status: "Completed",
       };
 
-      await axios.delete(`http://127.0.0.1:8000/api/challenges/${challengeId}/`, {
+      await axios.delete(`${BASE_URL}/api/challenges/${challengeId}/`, {
         headers: { Authorization: `Token ${token}` },
       });
 
@@ -84,7 +84,7 @@ const UpdateChallenge = () => {
         completed_challenges: profileData.completed_challenges + 1,
       };
 
-      await axios.put('http://127.0.0.1:8000/api/profile/', profileDataToUpdate, {
+      await axios.put(`${BASE_URL}/api/profile/`, profileDataToUpdate, {
         headers: {
           Authorization: `Token ${token}`,
           'Content-Type': 'application/json',

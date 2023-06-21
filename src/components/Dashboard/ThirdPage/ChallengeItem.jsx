@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import BASE_URL from './../../config';
 function ChallengeItem(props) {
   const { challenge, token } = props;
   const { id, challengeType, description } = challenge;
@@ -17,7 +17,7 @@ function ChallengeItem(props) {
       };
 
       const response = await axios.post(
-        `http://127.0.0.1:8000/api/challenges/${id}/`,
+        `${BASE_URL}/api/challenges/${id}/`,
         updatedChallenge,
         {
           headers: { Authorization: `token ${token}` },

@@ -6,6 +6,7 @@ import facebook from '../../assets/images/login/facebook-logo.png';
 import google from '../../assets/images/login/google-logo.png';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import BASE_URL from './../config';
 
 const Signup = () => {
   const [showScreen, setShowScreen] = useState(false);
@@ -63,7 +64,7 @@ const Signup = () => {
     };
 
     axios
-      .post('http://localhost:8000/api/dj-rest-auth/registration/', formData)
+      .post(`${BASE_URL}/api/dj-rest-auth/registration/`, formData)
       .then((response) => {
         console.log(response.data);
         navigate('/login');

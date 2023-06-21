@@ -5,7 +5,7 @@ import './TrainingChart.css';
 import axios from 'axios';
 import 'chartjs-adapter-date-fns';
 import 'chart.js/auto';
-
+import BASE_URL from './../../config';
 const TrainingChart = () => {
   const [logData, setLogData] = useState([]);
 
@@ -13,7 +13,7 @@ const TrainingChart = () => {
     const fetchLogData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://127.0.0.1:8000/api/logtraining/', {
+        const response = await axios.get(`${BASE_URL}/api/logtraining/`, {
           headers: {
             Authorization: `token ${token}`,
             'Content-Type': 'application/json',

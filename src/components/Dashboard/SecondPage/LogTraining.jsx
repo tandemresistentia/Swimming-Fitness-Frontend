@@ -8,7 +8,7 @@ import Divider from '../../../assets/images/dashboard/Divider.png';
 import './SecondPage.css';
 import './LogTraining.css';
 import { Scrollbars } from 'react-custom-scrollbars';
-
+import BASE_URL from './../../config';
 const LogTraining = () => {
   const [showRectangle, setShowRectangle] = useState(false);
   const [profileData, setProfileData] = useState(null);
@@ -20,7 +20,7 @@ const LogTraining = () => {
 
   const fetchProfileData = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/profile/', {
+      const response = await axios.get(`${BASE_URL}/api/profile/`, {
         headers: { Authorization: `Token ${token}` },
       });
 
@@ -47,7 +47,7 @@ const LogTraining = () => {
       username: usernameData,
     };
 
-    const apiUrl = 'http://127.0.0.1:8000/api/logtraining/';
+    const apiUrl = `${BASE_URL}/api/logtraining/`;
     const token = localStorage.getItem('token');
 
     axios
@@ -68,7 +68,7 @@ const LogTraining = () => {
           average_lap_time: profileData.average_lap_time + parseInt(logTrainingData.time) / 60,
         };
 
-        await axios.put('http://127.0.0.1:8000/api/profile/', profileDataToUpdate, {
+        await axios.put(`${BASE_URL}/api/profile/`, profileDataToUpdate, {
           headers: {
             Authorization: `Token ${token}`,
             'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const LogTraining = () => {
     const fetchLogData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://127.0.0.1:8000/api/logtraining/', {
+        const response = await axios.get(`${BASE_URL}/api/logtraining/`, {
           headers: {
             Authorization: `token ${token}`,
             'Content-Type': 'application/json',
