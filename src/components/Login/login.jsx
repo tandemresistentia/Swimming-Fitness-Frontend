@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './login.css';
 import Logo from '../home_page/Navbar/AppNavbarLogo';
-import { Link, useHistory } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import facebook from '../../assets/images/login/facebook-logo.png';
 import google from '../../assets/images/login/google-logo.png';
 import axios from 'axios';

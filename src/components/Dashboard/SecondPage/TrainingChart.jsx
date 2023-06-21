@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Line, Chart } from 'react-chartjs-2';
+import { Line} from 'react-chartjs-2';
 import TrainingUpper from '../../../assets/images/dashboard/training-upper.png';
 import './TrainingChart.css';
 import axios from 'axios';
@@ -33,17 +33,6 @@ const TrainingChart = () => {
 
     fetchLogData();
   }, []);
-
-  const saveLogTraining = () => {
-    const token = localStorage.getItem('token');
-    const requestBody = {
-      distance: setLogData.distance,
-      time: setLogData.time,
-      fastest_lap: setLogData.fastest_lap,
-      // Add other log training fields as needed
-    };
-    // Rest of your saveLogTraining logic...
-  };
 
   const latestLogData = logData.slice(-7); // Retrieve the 7 latest data points
 

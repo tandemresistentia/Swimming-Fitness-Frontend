@@ -1,9 +1,7 @@
 import './home.css';
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import Hero from './Hero/hero';
 import Navbar from './Navbar/Navbar';
-import NavbarLoggedIn from './Navbar/NavbarLoggedIn'; // import the logged-in navbar component
 import Stats from './Stats/stats';
 import Cta from './CTA/cta';
 import Statements from './statements/statements';

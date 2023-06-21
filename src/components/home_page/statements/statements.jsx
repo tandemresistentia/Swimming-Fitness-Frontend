@@ -68,10 +68,10 @@ const Statements = () => {
         </div>
         <div className='movement-buttons'>
             <button className='movement-button-1'>
-                <img src={button1} onClick={handleButton1Click}></img>
+                <img src={button1} onClick={handleButton1Click} alt=''></img>
             </button>
             <button className='movement-button-2'>
-                <img src={button2} onClick={handleButton2Click}></img>
+                <img src={button2} onClick={handleButton2Click} alt=''></img>
             </button>
         </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './hero.css'
-import switcher from '../../../assets/images/home_page/Ellipse_1.png'
 import Paragraph from './Paragraph';
 import { Link } from 'react-router-dom'
 const Hero = () => {

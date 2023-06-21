@@ -28,11 +28,6 @@ const Navbar = () => {
     }
   }, []);
 
-  const handleLogin = () => {
-    // Consider the user logged in
-    setIsLoggedIn(true);
-  };
-
   const handleLogout = () => {
     // Logic for logout
     setIsLoggedIn(false);

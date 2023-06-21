@@ -58,11 +58,6 @@ const UpdateChallenge = () => {
     setSelectedChallenge(challengeToUpdate);
 
     try {
-      const updatedChallenge = {
-        ...challengeToUpdate,
-        status: "Completed",
-      };
-
       await axios.delete(`${BASE_URL}/api/challenges/${challengeId}/`, {
         headers: { Authorization: `Token ${token}` },
       });

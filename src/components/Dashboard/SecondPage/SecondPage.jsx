@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{useState} from 'react';
 import './SecondPage.css';
 import ChevronRight from '../../../assets/images/dashboard/chevron-right.png'
 import ChevronLeft from '../../../assets/images/dashboard/chevron-left.png'
@@ -115,14 +115,14 @@ const SecondPage = ({ goToNextPage, goToPreviousPage }) => {
           <div className='most-popular'>
             <p className='most-popular-text'>Most Popular</p>
             <div className='most-popular-item'>
-              <img src={Popular1} />
+              <img alt='d' src={Popular1} />
               <div className='most-popular-item-text'>
                 <p className='most-popular-item-name'>Richard Park</p>
                 <p className='most-popular-item-subname'>Fastest lap</p>
               </div>
             </div>
             <div className='most-popular-item'>
-              <img src={Popular2} />
+              <img alt='d' src={Popular2} />
               <div className='most-popular-item-text'>
                 <p className='most-popular-item-name'>Pop Eye</p>
                 <p className='most-popular-item-subname'>Most Achievements</p>
@@ -131,12 +131,12 @@ const SecondPage = ({ goToNextPage, goToPreviousPage }) => {
           </div>
           </div>
           <div className='slide-button-dashboard'>
-            <button><Link to="/challenges"><img src={ChevronRight}/></Link></button>
-            <button><Link to="/profile"><img src={ChevronLeft}/></Link></button>
+            <button><Link to="/challenges"><img alt='d' src={ChevronRight}/></Link></button>
+            <button><Link to="/profile"><img alt='d' src={ChevronLeft}/></Link></button>
           </div>
       </div>
       <div className='bottom-dashboard'>
-        <img src={BottomDash} />
+        <img alt='d' src={BottomDash} />
       </div>
 
     </div>

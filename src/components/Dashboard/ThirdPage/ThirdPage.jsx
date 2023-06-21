@@ -2,8 +2,6 @@ import React from 'react';
 import './ThirdPage.css';
 import ChevronLeft from '../../../assets/images/dashboard/chevron-left.png'
 import BottomChall from '../../../assets/images/dashboard/bottom-challenges.png'
-
-import DownArrow from '../../../assets/images/dashboard/down-arrow.png'
 import NavBarLoggedIn from '../../home_page/Navbar/Navbar'
 import { Link } from 'react-router-dom'
 import ChallengesPlans from './ChallengesPlans';
@@ -20,7 +18,7 @@ const ThirdPage = ({ goToNextPage, goToPreviousPage }) => {
           <ChallengesPlans />
           </div>
           <div className='slide-button-challenges'>
-          <button><Link to="/dashboard"><img src={ChevronLeft}/></Link></button>
+          <button><Link to="/dashboard"><img src={ChevronLeft} alt=''/></Link></button>
           </div>
       </div>
       <div className='bottom-challenges'>

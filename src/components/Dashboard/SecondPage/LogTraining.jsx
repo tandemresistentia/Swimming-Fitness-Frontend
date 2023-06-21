@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CSSTransition } from 'react-transition-group';
-import { Line } from 'react-chartjs-2';
 import AddButton from '../../../assets/images/dashboard/AddButton.png';
 import LessButton from '../../../assets/images/dashboard/LessButton.png';
 import Divider from '../../../assets/images/dashboard/Divider.png';
