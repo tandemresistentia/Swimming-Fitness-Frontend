@@ -1,10 +1,38 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useSpring, animated } from 'react-spring';
 import './contact.css'
 import Navbar from '../home_page/Navbar/Navbar'
 import Footer from '../home_page/Footer/footer'
+import axios from 'axios';
+import BASE_URL from './../config';
+
 const Contact = () => {
-    
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleFormSubmit = async (e) => {
+      e.preventDefault();
+
+      try {
+       
+        const response = await axios.post(`${BASE_URL}/api/contact/`, {
+          name,
+          email,
+          message,
+        });
+
+        console.log(response.data); // Handle the response as desired
+
+        // Clear the form inputs
+        setName('');
+        setEmail('');
+        setMessage('');
+      } catch (error) {
+        console.error(error);
+        // Handle error
+      }
+    };
     const animatedBackground = useSpring({
       from: { filter: 'blur(8px)' },
       to: { filter: 'blur(0px)' },
@@ -44,25 +72,42 @@ const Contact = () => {
         <div className='right-side'>
             <div className='contact-form'>
                 <p className='contact-title'>Contact Us</p>
-                <form className='contact-form'>
-
-                    <div className='app-rectangle'>
+                <form className="contact-form" onSubmit={handleFormSubmit}>
+                  <div className='app-rectangle'>
                     <p className='fill-text'>Your name</p>
-                    <input className='contact-input' type='text' placeholder='Name' />
-                    </div>
-                    <div className='app-rectangle'>
+                    <input
+                      className='contact-input'
+                      type='text'
+                      placeholder='Name'
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </div>
+                  <div className='app-rectangle'>
                     <p className='fill-text'>Email address</p>
-                    <input className='contact-input' type='text' placeholder='Email' />
-                    </div>
-                    <div className='app-rectangle'>
+                    <input
+                      className='contact-input'
+                      type='text'
+                      placeholder='Email'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <div className='app-rectangle'>
                     <p className='fill-text'>Message</p>
-                    <textarea className='contact-textarea' type='text' placeholder='Message' />
-                    </div>
-                    <div className='app-rectangle'>
-                        <animated.button style={animationProps} className='contact-button'>
-                        Send message
-                        </animated.button>
-                    </div>
+                    <textarea
+                      className='contact-textarea'
+                      type='text'
+                      placeholder='Message'
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
+                  </div>
+                  <div className='app-rectangle'>
+                    <animated.button style={animationProps} className='contact-button' type='submit'>
+                      Send message
+                    </animated.button>
+                  </div>
                 </form>
                 </div>
         </div>
