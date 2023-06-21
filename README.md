@@ -66,10 +66,3 @@ Contributions to the Swimming Fitness Frontend project are welcome and encourage
 4. Push the changes to your forked repository: `git push origin feature/your-feature-name`
 5. Open a pull request on the original repository.
 
-## License
-
-The Swimming Fitness Frontend project is licensed under the [MIT License](LICENSE.md). You are free to use, modify, and distribute the code.
-
----
-
-Feel free to customize this README file according to your project's specific details and requirements. Include any additional sections or information that might be relevant to users and contributors. Adding badges, screenshots, and GIFs can also enhance the overall presentation of your project on GitHub.
