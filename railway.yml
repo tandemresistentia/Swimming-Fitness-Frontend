@@ -1,0 +1,6 @@
+# railway.yml
+
+name: my-react-app
+builders:
+  frontend:
+    command: npm run build
