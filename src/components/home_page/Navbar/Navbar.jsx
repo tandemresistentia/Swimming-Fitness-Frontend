@@ -82,7 +82,7 @@ const Navbar = () => {
                 <>
                 
                 <div className='app__navbar-login'>
-              <Link to="/login" className='p_navbar-link'>Login</Link>
+              <Link to="/login" className='p_navbar-link-login'>Login</Link>
               <Link to="/signup" className={`navbar-signup ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>Sign Up</Link>

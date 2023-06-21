@@ -83,7 +83,19 @@
 .navbar-login{
     color: #556987;
 }
-
+.p_navbar-link-login{
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    white-space: nowrap;
+    color: #556987;
+}
+.p_navbar-link-login:hover{
+    color: #000000;
+}
 .navbar-signup {
     display: flex;
     flex-direction: row;
