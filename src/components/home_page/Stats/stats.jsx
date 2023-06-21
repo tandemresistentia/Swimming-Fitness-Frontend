@@ -36,7 +36,7 @@ const Stats = () => {
 
       return () => clearInterval(interval);
     }
-  }, [loaded]);
+  }, [loaded, targetPercentages]); // Added targetPercentages to the dependency array
 
   useEffect(() => {
     AOS.init({
