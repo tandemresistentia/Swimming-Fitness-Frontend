@@ -24,7 +24,6 @@ function ChallengeItem(props) {
         }
       );
 
-      console.log(response.data);
       window.location.reload(); // Reload the page
     } catch (error) {
       console.error(error);

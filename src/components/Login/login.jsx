@@ -40,7 +40,6 @@ const Login = () => {
     axios
     .post(`${BASE_URL}/api/dj-rest-auth/login/`, formData)
     .then(response => {
-      console.log(response);
       const responseData = JSON.parse(response.config.data);
       const username = responseData.username;
       localStorage.setItem('username', username);
